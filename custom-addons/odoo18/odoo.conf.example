@@ -1,0 +1,16 @@
+[options]
+
+; Example admin password 
+admin_passwd = admin_password_here
+
+; PostgreSQL connection
+db_host = localhost
+db_port = 5432
+db_user = odoo
+db_password = your_db_password_here
+
+; Paths to addons
+addons_path = /path/to/odoo/odoo/addons,/path/to/your/custom/addons
+
+; Optional settings
+default_productivity_apps = True

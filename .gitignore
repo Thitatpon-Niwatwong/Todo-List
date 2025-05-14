@@ -1,0 +1,5 @@
+venv/
+community/
+.vscode/
+__pycache__/
+odoo.conf
