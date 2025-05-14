@@ -76,15 +76,6 @@ class TodoItem(models.Model):
                 'Items can only be marked complete in In Progress status.'
             )
 
-    def write(self, vals):
-        if 'completed' in vals:
-            for rec in self:
-                if rec.todo_id.status != 'in_progress':
-                    raise ValidationError(
-                        'Cannot change item status unless Todo List is In Progress.'
-                    )
-        return super(TodoItem, self).write(vals)
-
     @api.model
     def create(self, vals):
         todo = self.env['todo.list'].browse(vals.get('todo_id'))
