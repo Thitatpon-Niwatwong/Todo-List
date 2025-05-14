@@ -99,20 +99,3 @@ class TodoTag(models.Model):
     _rec_name = 'name'
 
     name = fields.Char(required=True, string='Tag Name')
-
-
-class TodoMenu(models.Model):
-    _name = 'todo.menu'
-    _description = 'Todo List Menu'
-
-    all_menu = fields.One2many('todo.list', 'status', string='All')
-    uncomplete_menu = fields.One2many(
-        'todo.list', 'status',
-        domain=[('status', '!=', 'complete')],
-        string='Uncomplete'
-    )
-    complete_menu = fields.One2many(
-        'todo.list', 'status',
-        domain=[('status', '=', 'complete')],
-        string='Complete'
-    )
