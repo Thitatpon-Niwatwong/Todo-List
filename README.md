@@ -2,7 +2,7 @@
 
 This project sets up an Odoo 18 environment along with custom modules, including a Todo List module with CRUD operations, tagging, and attendee tracking.
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone Odoo 18 source code
 
